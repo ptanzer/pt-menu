@@ -66,11 +66,11 @@ def prgaccess(ipid, prglst):
     execProg(prglst[ipid] )
     
 def Create_btline(self, myrow, prglst):
-    mybg="#6666FF"
+    mybg="#000066"
     myfg="white"
     for i in range(0, 4):
         if (prglst[i] == "Ende") or (prglst[i] == "Exit"):
-            mybg="#FF5555"
+            mybg="#AA0000"
         self.newmessage = Button(self, text= prglst[i], command = lambda i=i: prgaccess(i, prglst),  font=("Arial",14), bg=mybg, fg=myfg, width=19, height=3)
         self.newmessage.config(height = 3, width = 19)
         self.newmessage.grid(row = myrow, column = i, padx=3, pady=3, sticky = NW)
